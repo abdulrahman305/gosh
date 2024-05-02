@@ -263,3 +263,17 @@ export type TDBDaoInvite = {
   daoname: string
   accepted: boolean | null
 }
+
+export type TDaoIsMemberOfList = {
+  is_fetching: boolean
+  items: TDaoIsMemberOfListItem[]
+  error?: any
+}
+
+export type TDaoIsMemberOfListItem = {
+  dao: Dao
+  dao_name: string
+  wallet: DaoWallet
+  karma: number
+  balance: number
+}
